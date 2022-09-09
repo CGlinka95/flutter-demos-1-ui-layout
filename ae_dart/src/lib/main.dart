@@ -26,10 +26,10 @@ void main() {
   print(p2.age);
   p1.changePropsWithPositionalParameters('John', 22);
   p1.printProps();
-  //p1.changePropsWithPositionalParameters(22, 'John');
-  p2.changePropsWithNamedParameters(name:'Jim', age:33);
+  // p1.changePropsWithPositionalParameters(22, 'John');
+  p2.changePropsWithNamedParameters(name: 'Jim', age: 33);
   p2.printProps();
-  p2.changePropsWithNamedParameters(age:35);
+  p2.changePropsWithNamedParameters(age: 35);
   p2.printProps();
 
   var p3 = PersonNewWay(name: 'Hey Man');
@@ -38,7 +38,6 @@ void main() {
   p3.printProps();
   var p4 = PersonNewWay.printNameAndAge(name: 'Jimbo');
   p4.printProps();
-  
 }
 
 // Define a function with one parameter.
@@ -59,7 +58,7 @@ class PersonOldWay {
 
   //Functions inside of a class are called "methods".
   //This one uses "positional" parameters.
-  void changePropsWithPositionalParameters(String newName, int age){
+  void changePropsWithPositionalParameters(String newName, int age) {
     //Because of different property and parameter names
     name = newName;
     //When a parameter name is the same as the property name
@@ -70,12 +69,13 @@ class PersonOldWay {
   //This one uses "named" parameters.
   //Named parameters have to be initialized as they are optional
   //and can't be null.
-  void changePropsWithNamedParameters({String name = '', int age = 0}){
+  //If you do NOT passs something in, they will be set to their defaults, empty string and 0
+  void changePropsWithNamedParameters({String name = '', int age = 0}) {
     this.name = name;
     this.age = age;
   }
 
-  void printProps(){
+  void printProps() {
     print('My name is: $name');
     print('My age is: $age');
   }
