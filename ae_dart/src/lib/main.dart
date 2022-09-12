@@ -69,7 +69,7 @@ class PersonOldWay {
   //This one uses "named" parameters.
   //Named parameters have to be initialized as they are optional
   //and can't be null.
-  //If you do NOT passs something in, they will be set to their defaults, empty string and 0
+  //If you do NOT pass something in, they will be set to their defaults, empty string and 0
   void changePropsWithNamedParameters({String name = '', int age = 0}) {
     this.name = name;
     this.age = age;
